@@ -12,12 +12,12 @@ var U = {
         if ( (typeof id == 'string') && (typeof message == 'string')) {
             var output = this.$(id);
             if (!output) return false;
-            if (output.textContext !== undefined) {
-                output.textContext = message;
+            if (output.textContent !== undefined) {
+                output.textContent = message;
             } else {
                 output.innerText = message;
             }
-            return true
+            return true;
         }
     },
 
@@ -28,7 +28,7 @@ var U = {
         } else if (obj && obj.attachEvent) {
             obj.attachEvent('on' + type, fn);
         } else {
-            console.log('test')
+            console.log('test');
         }
     },
 
